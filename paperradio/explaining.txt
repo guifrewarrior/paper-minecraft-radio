@@ -1,0 +1,31 @@
+Main components
+PaperRadioPlugin.java
+Starts the plugin.
+Registers event listeners and the /radio command.
+StructureListener.java
+Detects the antenna structure and left-clicks.
+Opens the radio GUI when the correct block is clicked.
+RadioGUI.java
+Builds the inventory GUI shown to the player.
+Shows channel info, connect/disconnect, and frequency controls.
+InventoryListener.java
+Handles GUI clicks.
+Runs actions like joining/leaving channels or changing frequency.
+RadioCommand.java
+Provides chat commands:
+/radio join
+/radio leave
+/radio say
+/radio list
+/radio frequency
+RadioManager.java
+Tracks active channels and players.
+Sends messages to everyone on the same radio frequency.
+RadioChannel.java
+Represents one radio channel and its state.
+Runtime flow
+Plugin loads.
+Player left-clicks the antenna block.
+StructureListener checks the structure and opens the GUI.
+Player interacts with the GUI or uses /radio commands.
+RadioManager adds/removes players and relays messages across connected channels.
